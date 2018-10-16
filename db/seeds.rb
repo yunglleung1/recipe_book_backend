@@ -50,6 +50,9 @@ recipes.each do |recipe|
   # byebug
 end
 
+  User.create(name: 'Yung')
+  RecipeCard.create(user_id: 1, recipe_id: 1)
+
 # name = 'Apple%20Frangipan%20Tart'
 # url = 'https://www.themealdb.com/api/json/v1/1/search.php?s=' + name
 
