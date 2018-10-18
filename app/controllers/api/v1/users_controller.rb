@@ -1,5 +1,5 @@
 class Api::V1::UsersController < ApplicationController
-  before_action :find_user, only: [:update]
+  before_action :find_user, only: [:update, :show]
 
   def index
     @users = User.all
@@ -17,9 +17,8 @@ class Api::V1::UsersController < ApplicationController
 
   def show
     # byebug
-    # @user = User.find(params[:userId])
-    render json: find_user
-    # render :show
+    # render json: find_user
+    render json: {user: @user, recipes: @user.recipes, recipe_cards: @user.recipe_cards}
   end
 
   private

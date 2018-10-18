@@ -31,6 +31,12 @@ class Api::V1::RecipeCardsController < ApplicationController
     end
   end
 
+  def destroy
+    # byebug
+    # console.log(recipe_card_params['id'].to_i)
+    RecipeCard.delete(recipe_card_params['id'].to_i)
+  end
+
   private
 
   def recipe_card_params
