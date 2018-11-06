@@ -16,8 +16,8 @@ ActiveRecord::Schema.define(version: 2018_10_09_230413) do
   enable_extension "plpgsql"
 
   create_table "recipe_cards", force: :cascade do |t|
-    t.integer "userId"
-    t.integer "recipeId"
+    t.integer "user_id"
+    t.integer "recipe_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
